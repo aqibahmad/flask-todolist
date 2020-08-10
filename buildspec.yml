@@ -1,3 +1,4 @@
+---
 version: 0.2
 
 env:
@@ -5,7 +6,6 @@ env:
     LOGIN_PASSWORD: /CodeBuild/dockerLoginPassword
 
 phases:
-
   pre_build:
     commands:
       - "echo Logging in to Docker Hub..."
