@@ -1,11 +1,15 @@
 version: 0.2
 
+env:
+  parameter-store:
+    LOGIN_PASSWORD: /CodeBuild/dockerLoginPassword
+
 phases:
 
   pre_build:
     commands:
       - "echo Logging in to Docker Hub..."
-      - "docker login --username=\"aqib398\" --password=\"hojvyd-4cewze-dedbAq\""
+      - "docker login --username=\"aqib398\" --password=$LOGIN_PASSWORD
       - "echo Pre Build stage completed..."
 
   build:
