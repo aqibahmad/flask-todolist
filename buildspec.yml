@@ -9,7 +9,7 @@ phases:
   pre_build:
     commands:
       - "echo Logging in to Docker Hub..."
-      - "docker login --username=\"aqib398\" --password=$LOGIN_PASSWORD
+      - "docker login --username=\"aqib398\" --password=$LOGIN_PASSWORD"
       - "echo Pre Build stage completed..."
 
   build:
