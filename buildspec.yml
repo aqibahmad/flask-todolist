@@ -1,0 +1,26 @@
+version: 0.2
+
+phases:
+
+  pre_build:
+    commands:
+      - "echo Logging in to Docker Hub..."
+      - "docker login --username=\"aqib398\" --password=\"hojvyd-4cewze-dedbAq\""
+      - "echo Pre Build stage completed..."
+
+  build:
+    commands:
+      - echo Build started on `date`
+      - "echo Building the Docker image..."
+      - "docker build -t aqib398/aqib-repo ."
+      - "docker tag aqib398/aqib-repo aqib398/aqib-repo:latest"
+      - "echo Docker image is built and tagged"
+      
+  post_build:
+    commands:
+      - echo Build completed on `date`
+      - "echo Pushing the Docker image..."
+      - "docker push aqib398/aqib-repo:latest"
+      - "echo script finished.."
+      
+     
