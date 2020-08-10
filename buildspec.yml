@@ -1,7 +1,13 @@
 ---
 version: 0.2
 
-
+artifacts:
+  files:
+    - '**/*'
+  base-directory: aqib-pipeline
+  name: BuildArtif
+  discard-paths: no
+  
 phases:
   pre_build:
     commands:
